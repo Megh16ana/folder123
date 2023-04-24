@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>rabbitone</title>
+        <link rel="stylesheet" href="regi.css">
+    </head>
+    <body>
+        <div class="full-page">
+            <div class="navbar">
+                <nav>
+                    <ul id=" menu items">
+                        <li> <a href='#'>home</a></li>
+                        <li> <a href='#'>About us</a></li>
+                            <li> <a href='#'>Services</a></li>
+                                <li> <a href='#'>contact</a></li>
+                                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">login</button></li>
+
+                    </ul>
+                </nav>
+                
+            </div>
+            <div id='login-form'class='login-page'>
+                <div class="form-box">
+                    <div class='button-box'>
+                        <div id='btn'></div>
+                        <button
+                        type='button'onclick='login()'class='toggle-btn'>login</button>
+                        <button
+                        type='button'onclick='register()'class='toggle-btn'>register</button>
+                    </div>
+                    <form id='login' class='input-group-login'>
+                        <input type="text"class="input-field"placeholder='email id'requried>
+                        <input type="password"class="input-field"placeholder='enter password'requried>
+                        <input type="checkbox"class="check-box"><span>remember password</span><button type='submit' class='submit-btn'>login</button>
+                    </form>
+                    <form id='register' class='input-group-login'>
+                        <input type="text"class="input-field"placeholder="full name"required>
+                        <input type="text"class="input-field"placeholder='email id'requried>
+                        <input type="phone no"class="input-field"placeholder=" 10 digit number"required>
+                        <input type="password"class="input-field"placeholder='enter password'requried>
+                        <input type="checkbox"class="check-box"><span>remember password</span><button type='submit' class='submit-btn'>login</button>
+                        
+                    </form>
+                </div>
+            </div>'
+        </div>
+        <script>
+            var x=document.getElementById('login');
+            var y=document.getElementById('register');
+            var z=document.getElementById('btn');
+            function register()
+            {
+                x.style.left='-400px';
+                y.style.left='50px';
+                z.style.left='110px';
+            }
+            function login()
+            {
+                x.style.left='50px';
+                y.style.left='450px';
+                z.style.left='0px';
+            }
+            </script>
+            <script>
+                var modal= document.getElementById('login-form');
+                window.onclick = function(event)
+                {
+                    if(event.target == modal)
+                    {
+                        modal.style.display ="none";
+                    }
+                }
+            </script>
+
+               
+
+
+
+
+        
+    </body>
+    </html>
+
+        
